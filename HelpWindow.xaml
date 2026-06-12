@@ -10,7 +10,7 @@
         Background="Black"
         Foreground="White"
         Title="Help"
-        Height="630"
+        Height="650"
         Width="420"
         ShowInTaskbar="False"
         KeyDown="Window_KeyDown">
@@ -58,6 +58,8 @@
             <TextBlock Text="L - LED WOPR"
                        Margin="0,0,0,4" />
             <TextBlock Text="T - Ethereal"
+                       Margin="0,0,0,4" />
+            <TextBlock Text="O - Oscilloscope"
                        Margin="0,0,0,14" />
 
             <TextBlock Text="Station Listing"
