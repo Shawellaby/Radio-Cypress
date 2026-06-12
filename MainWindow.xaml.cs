@@ -84,6 +84,7 @@ public partial class MainWindow : Window
         Wave,
         LedMatrix,
         Ethereal,
+        Starfield,
         StarTrekComputer,
         Oscilloscope,
         VuMeter
@@ -139,6 +140,7 @@ public partial class MainWindow : Window
         _visualizers[VisualizationMode.Wave] = new WaveSpectrumVisualizer();
         _visualizers[VisualizationMode.LedMatrix] = new LedMatrixSpectrumVisualizer();
         _visualizers[VisualizationMode.Ethereal] = new EtherealSpectrumVisualizer();
+        _visualizers[VisualizationMode.Starfield] = new StarfieldSpectrumVisualizer();
         _visualizers[VisualizationMode.Oscilloscope] = new OscilloscopeWaveformVisualizer();
         _visualizers[VisualizationMode.VuMeter] = new VuMeterVisualizer();
 
@@ -273,7 +275,7 @@ public partial class MainWindow : Window
 
         if (e.Key == Key.S)
         {
-            _visualizationMode = VisualizationMode.StarTrekComputer;
+            _visualizationMode = VisualizationMode.Starfield;
             return;
         }
 
