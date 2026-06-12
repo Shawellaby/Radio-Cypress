@@ -2,7 +2,7 @@
 using System.Windows.Media;
 using System.Windows.Shapes;
 
-namespace RadioCypress.Visualizations;
+namespace Shawellaby.RadioCypress.Visualizations;
 
 public sealed class OscilloscopeWaveformVisualizer : IVisualizer
 {

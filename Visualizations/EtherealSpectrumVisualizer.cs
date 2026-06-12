@@ -4,7 +4,7 @@ using System.Windows.Media;
 using System.Windows.Media.Effects;
 using System.Windows.Shapes;
 
-namespace RadioCypress.Visualizations;
+namespace Shawellaby.RadioCypress.Visualizations;
 
 public sealed class EtherealSpectrumVisualizer : IVisualizer
 {

@@ -3,7 +3,7 @@ using System.Windows.Media;
 using CSCore;
 using NAudio.Dsp;
 
-namespace RadioCypress.Visualizations;
+namespace Shawellaby.RadioCypress.Visualizations;
 
 public sealed class SpectrumVisualizationContext
 {

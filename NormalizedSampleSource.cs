@@ -1,6 +1,6 @@
 ﻿using CSCore;
 
-namespace RadioCypress;
+namespace Shawellaby.RadioCypress;
 
 /// <summary>
 /// Provides a wrapper around an ISampleSource that applies gain normalization to audio samples.

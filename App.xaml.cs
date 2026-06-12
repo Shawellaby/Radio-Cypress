@@ -2,7 +2,7 @@
 using System.Data;
 using System.Windows;
 
-namespace RadioCypress;
+namespace Shawellaby.RadioCypress;
 
 /// <summary>
 /// Interaction logic for App.xaml

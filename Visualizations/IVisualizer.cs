@@ -1,6 +1,6 @@
 ﻿using System.Windows.Controls;
 
-namespace RadioCypress.Visualizations;
+namespace Shawellaby.RadioCypress.Visualizations;
 
 public interface IVisualizer
 {

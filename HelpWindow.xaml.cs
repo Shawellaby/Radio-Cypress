@@ -4,7 +4,7 @@ using System.Linq;
 using System.Windows;
 using System.Windows.Input;
 
-namespace RadioCypress;
+namespace Shawellaby.RadioCypress;
 
 public partial class HelpWindow : Window
 {

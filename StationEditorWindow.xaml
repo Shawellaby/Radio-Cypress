@@ -1,4 +1,4 @@
-﻿<Window x:Class="RadioCypress.StationEditorWindow"
+﻿<Window x:Class="Shawellaby.RadioCypress.StationEditorWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         WindowStyle="SingleBorderWindow"

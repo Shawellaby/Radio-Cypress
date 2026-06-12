@@ -4,7 +4,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 
-namespace RadioCypress;
+namespace Shawellaby.RadioCypress;
 
 public partial class StationSelectionWindow : Window
 {

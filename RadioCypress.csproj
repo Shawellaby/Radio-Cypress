@@ -3,6 +3,7 @@
     <PropertyGroup>
         <OutputType>WinExe</OutputType>
         <TargetFramework>net10.0-windows</TargetFramework>
+        <RootNamespace>Shawellaby.RadioCypress</RootNamespace>
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
         <UseWPF>true</UseWPF>
@@ -23,7 +24,7 @@
         <DebugType>none</DebugType>
         <DebugSymbols>false</DebugSymbols>
         <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
-        <AssemblyTitle>Regitz Radio</AssemblyTitle>
+        <AssemblyTitle>Radio Cypress</AssemblyTitle>
         <Description>Internet Streaming Companion</Description>
         <Copyright>2022-2026 Shawellaby Software LLC</Copyright>
         <PackageProjectUrl>https://github.com/Shawellaby</PackageProjectUrl>

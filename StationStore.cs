@@ -1,7 +1,7 @@
 ﻿using System.IO;
 using System.Text.Json;
 
-namespace RadioCypress;
+namespace Shawellaby.RadioCypress;
 
 public sealed record StationDefinition(
     int Number,

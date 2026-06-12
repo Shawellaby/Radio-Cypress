@@ -5,13 +5,12 @@ using CSCore.Codecs;
 using CSCore.SoundOut;
 using Microsoft.Win32;
 using System.Windows.Threading;
-using System.Diagnostics;
 using NAudio.Lame;
 using CSCore.Streams;
 using NAudio.Dsp;
-using RadioCypress.Visualizations;
+using Shawellaby.RadioCypress.Visualizations;
 
-namespace RadioCypress;
+namespace Shawellaby.RadioCypress;
 
 /// <summary>
 /// Interaction logic for MainWindow.xaml

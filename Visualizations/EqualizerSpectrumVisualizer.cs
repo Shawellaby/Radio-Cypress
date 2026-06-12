@@ -3,7 +3,7 @@ using System.Windows.Media;
 using System.Windows.Shapes;
 using NAudio.Dsp;
 
-namespace RadioCypress.Visualizations;
+namespace Shawellaby.RadioCypress.Visualizations;
 
 public sealed class EqualizerSpectrumVisualizer : IVisualizer
 {
