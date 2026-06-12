@@ -16,7 +16,8 @@ public sealed class SpectrumVisualizationContext
         Func<int> getFftBufferIndex,
         Func<double> getSampleRate,
         Func<double> getSmoothedGain,
-        double[] bucketFrequencies)
+        double[] bucketFrequencies,
+        Func<(double Left, double Right)>? getStereoLevels = null)
     {
         FftSize = fftSize;
         FftBuffer = fftBuffer;
@@ -25,6 +26,7 @@ public sealed class SpectrumVisualizationContext
         GetSampleRate = getSampleRate;
         GetSmoothedGain = getSmoothedGain;
         BucketFrequencies = bucketFrequencies;
+        GetStereoLevels = getStereoLevels ?? (() => (0.0, 0.0));
         FftComplex = new Complex[fftSize];
     }
 
@@ -41,6 +43,8 @@ public sealed class SpectrumVisualizationContext
     public Func<double> GetSmoothedGain { get; }
 
     public double[] BucketFrequencies { get; }
+
+    public Func<(double Left, double Right)> GetStereoLevels { get; }
 
     public Complex[] FftComplex { get; }
 

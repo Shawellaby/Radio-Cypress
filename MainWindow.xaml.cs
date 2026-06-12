@@ -45,6 +45,8 @@ public partial class MainWindow : Window
     private SingleBlockNotificationStream _notificationSource;
     private bool _isMuted = false;
     private readonly object _audioLevelLock = new();
+    private double _leftVuLevel;
+    private double _rightVuLevel;
 
     public readonly record struct Station(string Name, string Url);
 
@@ -83,7 +85,8 @@ public partial class MainWindow : Window
         LedMatrix,
         Ethereal,
         StarTrekComputer,
-        Oscilloscope
+        Oscilloscope,
+        VuMeter
     }
 
     private static readonly double[] VisualizationBucketFrequencies =
@@ -128,7 +131,8 @@ public partial class MainWindow : Window
             () => _fftBufferIndex,
             () => _recordingSource?.WaveFormat?.SampleRate ?? 44100,
             () => _smoothedGain,
-            VisualizationBucketFrequencies);
+            VisualizationBucketFrequencies,
+            GetStereoVuLevels);
 
         _visualizers[VisualizationMode.Equalizer] = new EqualizerSpectrumVisualizer();
         _visualizers[VisualizationMode.Psychedelic] = new PsychedelicSpectrumVisualizer();
@@ -136,6 +140,7 @@ public partial class MainWindow : Window
         _visualizers[VisualizationMode.LedMatrix] = new LedMatrixSpectrumVisualizer();
         _visualizers[VisualizationMode.Ethereal] = new EtherealSpectrumVisualizer();
         _visualizers[VisualizationMode.Oscilloscope] = new OscilloscopeWaveformVisualizer();
+        _visualizers[VisualizationMode.VuMeter] = new VuMeterVisualizer();
 
         _visualizationTimer = new DispatcherTimer();
         _visualizationTimer.Interval = TimeSpan.FromMilliseconds(50);
@@ -275,6 +280,12 @@ public partial class MainWindow : Window
         if (e.Key == Key.O)
         {
             _visualizationMode = VisualizationMode.Oscilloscope;
+            return;
+        }
+
+        if (e.Key == Key.V)
+        {
+            _visualizationMode = VisualizationMode.VuMeter;
             return;
         }
 
@@ -438,6 +449,8 @@ public partial class MainWindow : Window
                 if (_fftBufferIndex >= FftSize)
                     _fftBufferIndex = 0;
             }
+
+            UpdateStereoVuLevels(a.Left, a.Right);
         };
 
         var normalizedSampleSource = new NormalizedSampleSource(_notificationSource, this);
@@ -484,6 +497,30 @@ public partial class MainWindow : Window
     {
         IsMutedLabel.Visibility = _isMuted ? Visibility.Visible : Visibility.Collapsed;
         IsRecordingLabel.Visibility = _isRecording ? Visibility.Visible : Visibility.Collapsed;
+    }
+
+    private void UpdateStereoVuLevels(float left, float right)
+    {
+        double leftMagnitude = Math.Abs(left);
+        double rightMagnitude = Math.Abs(right);
+
+        lock (_audioLevelLock)
+        {
+            _leftVuLevel = Math.Max(leftMagnitude, _leftVuLevel * 0.985);
+            _rightVuLevel = Math.Max(rightMagnitude, _rightVuLevel * 0.985);
+        }
+    }
+
+    private (double Left, double Right) GetStereoVuLevels()
+    {
+        lock (_audioLevelLock)
+        {
+            double gain = Math.Clamp(_smoothedGain, 0.5, 4.0);
+
+            return (
+                Math.Clamp(Math.Sqrt(_leftVuLevel * gain), 0.0, 1.0),
+                Math.Clamp(Math.Sqrt(_rightVuLevel * gain), 0.0, 1.0));
+        }
     }
 
 
