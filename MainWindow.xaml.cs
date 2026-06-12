@@ -83,7 +83,8 @@ public partial class MainWindow : Window
         Wave,
         LedMatrix,
         Ethereal,
-        StarTrekComputer
+        StarTrekComputer,
+        Oscilloscope
     }
 
     private static readonly double[] VisualizationBucketFrequencies =
@@ -135,6 +136,7 @@ public partial class MainWindow : Window
         _visualizers[VisualizationMode.Wave] = new WaveSpectrumVisualizer();
         _visualizers[VisualizationMode.LedMatrix] = new LedMatrixSpectrumVisualizer();
         _visualizers[VisualizationMode.Ethereal] = new EtherealSpectrumVisualizer();
+        _visualizers[VisualizationMode.Oscilloscope] = new OscilloscopeWaveformVisualizer();
 
         _visualizationTimer = new DispatcherTimer();
         _visualizationTimer.Interval = TimeSpan.FromMilliseconds(50);
@@ -268,6 +270,12 @@ public partial class MainWindow : Window
         if (e.Key == Key.S)
         {
             _visualizationMode = VisualizationMode.StarTrekComputer;
+            return;
+        }
+
+        if (e.Key == Key.O)
+        {
+            _visualizationMode = VisualizationMode.Oscilloscope;
             return;
         }
 

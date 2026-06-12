@@ -94,7 +94,7 @@ json [{"Number":1,"Name":"Cypress Radio","Url":"https://CypressRadio.org:8000/st
 | `W` | Wave |
 | `L` | LED Matrix / WOPR |
 | `T` | Ethereal |
-| `S` | Star Trek Computer |
+| `O` | Oscilloscope |
 
 ---
 
