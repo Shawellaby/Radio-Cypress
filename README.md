@@ -83,6 +83,23 @@ json [{"Number":1,"Name":"Cypress Radio","Url":"https://CypressRadio.org:8000/st
 | `R` | Start / stop recording |
 | `Q` | Quit application |
 
+
+---
+## Station Preset Editing (CTRL-E key)
+<img src="RepoAssets\RadioCypress_readmeimage_0c.png" alt="Radio Cypress screenshot" width="600">
+
+---
+
+---
+## Station Selection (ENTER key)
+<img src="RepoAssets\RadioCypress_readmeimage_0a.png" alt="Radio Cypress screenshot" width="400">
+
+---
+
+---
+## HELP (H key)
+<img src="RepoAssets\RadioCypress_readmeimage_0b.png" alt="Radio Cypress screenshot" width="400">
+
 ---
 
 ## Visualization Shortcuts
