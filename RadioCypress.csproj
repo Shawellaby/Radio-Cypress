@@ -1,0 +1,63 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net10.0-windows</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <UseWPF>true</UseWPF>
+        <ApplicationIcon>Content\vintage-music-instrument-icon-radio-png.ico</ApplicationIcon>
+        <Company>Shawellaby Software</Company>
+
+        <AssemblyVersion>1.0.0.2</AssemblyVersion>
+
+        <SignAssembly>True</SignAssembly>
+        <AssemblyOriginatorKeyFile>Shawellaby_RadioCypress.snk</AssemblyOriginatorKeyFile>
+        <PublicSign>true</PublicSign>
+
+        <PublishSingleFile>true</PublishSingleFile>
+        <SelfContained>false</SelfContained>
+        <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+        <PublishTrimmed>false</PublishTrimmed>
+        <EnableCompressionInSingleFile>true</EnableCompressionInSingleFile>
+        <DebugType>none</DebugType>
+        <DebugSymbols>false</DebugSymbols>
+        <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+        <AssemblyTitle>Regitz Radio</AssemblyTitle>
+        <Description>Internet Streaming Companion</Description>
+        <Copyright>2022-2026 Shawellaby Software LLC</Copyright>
+        <PackageProjectUrl>https://github.com/Shawellaby</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/Shawellaby</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="CSCore" Version="1.2.1.2" />
+      <PackageReference Include="NAudio" Version="2.3.0" />
+      <PackageReference Include="NAudio.Lame" Version="2.1.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Content\logo.jpg" />
+      <None Remove="Content\radio_logo_RadioCypress.jpg" />
+      <None Remove="Content\radio_logo_DeepSpaceOne.jpg" />
+      <None Remove="Content\radio_logo_DoggLounge.jpg" />
+      <None Remove="Content\radio_logo_KEXP.jpg" />
+      <None Remove="Content\radio_logo_RadioMast.jpg" />
+      <None Remove="Content\radio_logo_WorldWideFM.jpg" />
+      <None Remove="Content\startupt.jpg" />
+      <None Remove="Content\startup.jpg" />
+      <None Remove="Content\radio_logo_Dandelion.jpg" />
+      <None Remove="Content\radio_logo_BigEighties.jpg" />
+      <None Remove="Content\radio_logo_PureCountry.jpg" />
+      <None Remove="Content\radio_logo_SmoothSeventies.jpg" />
+      <None Remove="Content\radio_logo_TheSpot.jpg" />
+      <None Remove="Content\radio_logo_TheCat.jpg" />
+      <None Remove="Content\radio_logo_Retro947.jpg" />
+      <None Remove="Content\radio_logo_Pickle993.jpg" />
+      <None Remove="Content\radio_logo_Big1021.jpg" />
+      <None Remove="Content\digital-7 (mono).ttf" />
+      <Resource Include="Content\digital-7 (mono).ttf" />
+    </ItemGroup>
+
+</Project>
