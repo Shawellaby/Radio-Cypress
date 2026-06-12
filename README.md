@@ -10,7 +10,7 @@
 ---
 
 <p align="center">
-  <img src="RadioCypress_readmeimage_01.png" alt="Radio Cypress screenshot" width="650">
+  <img src="RepoAssets\RadioCypress_readmeimage_01.png" alt="Radio Cypress screenshot" width="650">
 </p>
 ## Features
 
@@ -320,6 +320,16 @@ Possible visualization styles include:
 - VU meter
 - Neon pulse field
 - Starfield synced to
+
+Currently Included Visualizers:
+
+<img src="RepoAssets\RadioCypress_readmeimage_08.png" alt="Radio Cypress screenshot" width="400">
+<img src="RepoAssets\RadioCypress_readmeimage_02.png" alt="Radio Cypress screenshot" width="400">
+<img src="RepoAssets\RadioCypress_readmeimage_03.png" alt="Radio Cypress screenshot" width="400">
+<img src="RepoAssets\RadioCypress_readmeimage_04.png" alt="Radio Cypress screenshot" width="400">
+<img src="RepoAssets\RadioCypress_readmeimage_05.png" alt="Radio Cypress screenshot" width="400">
+<img src="RepoAssets\RadioCypress_readmeimage_06.png" alt="Radio Cypress screenshot" width="400">
+<img src="RepoAssets\RadioCypress_readmeimage_07.png" alt="Radio Cypress screenshot" width="400">
 
 ---
 
