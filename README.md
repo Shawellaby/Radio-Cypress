@@ -331,23 +331,179 @@ When creating a new visualization, try to keep it:
 
 Possible visualization styles include:
 
-- Oscilloscope waveform
-- Circular spectrum ring
-- VU meter
-- Neon pulse field
-- Starfield synced to
-
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left; padding: 8px; border-bottom: 2px solid #ddd;">Suggested Key</th>
+      <th style="text-align: left; padding: 8px; border-bottom: 2px solid #ddd;">Title</th>
+      <th style="text-align: left; padding: 8px; border-bottom: 2px solid #ddd;">Features</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="padding: 8px; border-bottom: 1px solid #ddd;">C</td>
+      <td style="padding: 8px; border-bottom: 1px solid #ddd;">Circular Spectrum Ring</td>
+      <td style="padding: 8px; border-bottom: 1px solid #ddd;">
+        A radial audio spectrum where frequency buckets form bars around a circle.<br>
+       <b>How it reacts to music:</b><br>
+        - Bass expands the whole ring outward.<br>
+        - Mid frequencies control bar length.<br>
+        - Treble adds sparkles or small orbiting dots.<br>
+        - Color hue rotates slowly with the beat.<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 8px; border-bottom: 1px solid #ddd;">G</td>
+      <td style="padding: 8px; border-bottom: 1px solid #ddd;">Neon Pulse Grid</td>
+      <td style="padding: 8px; border-bottom: 1px solid #ddd;">
+        A retro synthwave-style perspective grid that pulses with the audio.<br>
+        <b>How it reacts to music:</b><br>
+        - Bass makes the grid “jump” or bend.<br>
+        - Energy controls grid brightness.<br>
+        - Treble creates small lightning flickers along grid lines.<br>
+        - The horizon glow grows with louder sections.<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 8px; border-bottom: 1px solid #ddd;">F</td>
+      <td style="padding: 8px; border-bottom: 1px solid #ddd;">Fire / Flame Spectrum</td>
+      <td style="padding: 8px; border-bottom: 1px solid #ddd;">
+        A flame-like visualization where the bottom of the canvas burns in response to frequency energy.<br>
+       <b>How it reacts to music:</b><br>
+        - Bass controls flame height.<br>
+        - Mids create flame waves.<br>
+        - Treble creates sparks rising upward.<br>
+        - Louder audio shifts color from red/orange to yellow/white.<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 8px; border-bottom: 1px solid #ddd;">Y or Z</td>
+      <td style="padding: 8px; border-bottom: 1px solid #ddd;">Waterfall Spectrogram</td>
+      <td style="padding: 8px; border-bottom: 1px solid #ddd;">
+        A scrolling spectrogram where each frame of frequency data becomes a row or column of color.<br>
+       <b>How it reacts to music:</b><br>
+        - Frequency buckets are drawn as colored pixels/rectangles.<br>
+        - New audio enters at one edge.<br>
+        - Older frames scroll away.<br>
+        - Bass/mid/treble appear as different color bands.<br>
+        - More “scientific” and visually distinct from the existing equalizer.<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 8px; border-bottom: 1px solid #ddd;">D or A</td>
+      <td style="padding: 8px; border-bottom: 1px solid #ddd;">Radar Sweep</td>
+      <td style="padding: 8px; border-bottom: 1px solid #ddd;">
+        A green phosphor radar display with blips that react to music.<br>
+        <b>How it reacts to music:</b><br>
+        - A rotating sweep arm moves around the center.<br>
+        - Bass creates large blips.<br>
+        - Treble creates small bright blips.<br>
+        - Strong beats create expanding rings.<br>
+        - Older blips fade out slowly.<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 8px; border-bottom: 1px solid #ddd;">N or M (Avoid M)</td>
+      <td style="padding: 8px; border-bottom: 1px solid #ddd;">Rainfall / Matrix Rain</td>
+      <td style="padding: 8px; border-bottom: 1px solid #ddd;">
+        A falling-code visualizer, but music-reactive.<br>
+       <b>How it reacts to music:</b><br>
+        - Bass increases fall speed.<br>
+        - Treble increases character brightness.<br>
+        - Frequency buckets control column intensity.<br>
+        - Loud beats trigger green-white flashes.<br>
+        - Fits nicely with the existing retro/digital theme.<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 8px; border-bottom: 1px solid #ddd;">B or J</td>
+      <td style="padding: 8px; border-bottom: 1px solid #ddd;">Vinyl Record / Turntable</td>
+      <td style="padding: 8px; border-bottom: 1px solid #ddd;">
+        A spinning record with grooves that pulse with the music.<br>
+       <b>How it reacts to music:</b><br>
+        - Rotation speed subtly changes with energy.<br>
+        - Bass makes the record pulse outward.<br>
+        - Frequency levels draw glowing groove rings.<br>
+        - Treble creates small needle sparks.<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 8px; border-bottom: 1px solid #ddd;">K</td>
+      <td style="padding: 8px; border-bottom: 1px solid #ddd;">City Skyline</td>
+      <td style="padding: 8px; border-bottom: 1px solid #ddd;">
+        A neon city skyline where building heights react to frequency buckets.<br>
+       <b>How it reacts to music:</b><br>
+        - Each building maps to a frequency range.<br>
+        - Windows light up based on energy.<br>
+        - Bass makes the whole skyline glow.<br>
+        - Treble creates stars or aircraft lights.<br>
+        - Fun variation on a spectrum analyzer without looking like a standard equalizer.<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 8px; border-bottom: 1px solid #ddd;">A</td>
+      <td style="padding: 8px; border-bottom: 1px solid #ddd;">Aurora Borealis</td>
+      <td style="padding: 8px; border-bottom: 1px solid #ddd;">
+        Flowing colored ribbons across the screen.<br>
+       <b>How it reacts to music:</b><br>
+        - Bass controls ribbon height.<br>
+        - Mid frequencies control wave deformation.<br>
+        - Treble adds shimmering particles.<br>
+        - Overall volume controls brightness.<br>
+        - Complements Ethereal, but with a more sky-like northern-lights identity.<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 8px; border-bottom: 1px solid #ddd;">B or J</td>
+      <td style="padding: 8px; border-bottom: 1px solid #ddd;">Plasma Ball</td>
+      <td style="padding: 8px; border-bottom: 1px solid #ddd;">
+        A central glowing orb with lightning bolts that extend outward based on audio.<br>
+       <b>How it reacts to music:</b><br>
+        - Bass expands the orb.<br>
+        - Mids control bolt length.<br>
+        - Treble controls branching bolts.<br>
+        - Loud hits flash the center.<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 8px; border-bottom: 1px solid #ddd;">C</td>
+      <td style="padding: 8px; border-bottom: 1px solid #ddd;">Comet Trails</td>
+      <td style="padding: 8px; border-bottom: 1px solid #ddd;">
+        Frequency buckets become comets orbiting or flying across the display.<br>
+       <b>How it reacts to music:</b><br>
+        - Each comet maps to a band of frequencies.<br>
+        - Bass comets are large and slow.<br>
+        - Treble comets are small and fast.<br>
+        - Loud hits leave longer trails.<br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br><br>
 Currently Included Visualizers:
 
-<img src="RepoAssets\RadioCypress_readmeimage_08.png" alt="Radio Cypress screenshot" width="400">
-<img src="RepoAssets\RadioCypress_readmeimage_02.png" alt="Radio Cypress screenshot" width="400">
-<img src="RepoAssets\RadioCypress_readmeimage_03.png" alt="Radio Cypress screenshot" width="400">
-<img src="RepoAssets\RadioCypress_readmeimage_04.png" alt="Radio Cypress screenshot" width="400">
-<img src="RepoAssets\RadioCypress_readmeimage_05.png" alt="Radio Cypress screenshot" width="400">
-<img src="RepoAssets\RadioCypress_readmeimage_06.png" alt="Radio Cypress screenshot" width="400">
-<img src="RepoAssets\RadioCypress_readmeimage_07.png" alt="Radio Cypress screenshot" width="400">
-<img src="RepoAssets\RadioCypress_readmeimage_09.png" alt="Radio Cypress screenshot" width="400">
-<img src="RepoAssets\RadioCypress_readmeimage_10.png" alt="Radio Cypress screenshot" width="400">
+<table border=0>
+  <tr>
+    <td><img src="RepoAssets\RadioCypress_readmeimage_08.png" alt="Radio Cypress screenshot" width="500"></td>
+    <td><img src="RepoAssets\RadioCypress_readmeimage_02.png" alt="Radio Cypress screenshot" width="500"></td>
+  </tr>
+  <tr>
+    <td><img src="RepoAssets\RadioCypress_readmeimage_03.png" alt="Radio Cypress screenshot" width="500"></td>
+    <td><img src="RepoAssets\RadioCypress_readmeimage_04.png" alt="Radio Cypress screenshot" width="500"></td>
+  </tr>
+  <tr>
+    <td><img src="RepoAssets\RadioCypress_readmeimage_05.png" alt="Radio Cypress screenshot" width="500"></td>
+    <td><img src="RepoAssets\RadioCypress_readmeimage_06.png" alt="Radio Cypress screenshot" width="500"></td>
+  </tr>
+  <tr>
+    <td><img src="RepoAssets\RadioCypress_readmeimage_07.png" alt="Radio Cypress screenshot" width="500"></td>
+    <td><img src="RepoAssets\RadioCypress_readmeimage_09.png" alt="Radio Cypress screenshot" width="500"></td>
+  </tr>
+  <tr>
+    <td><img src="RepoAssets\RadioCypress_readmeimage_10.png" alt="Radio Cypress screenshot" width="500"></td>
+    <td></td>
+  </tr>
+</table>
 
 ---
 
