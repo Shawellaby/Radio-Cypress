@@ -403,19 +403,6 @@ Possible visualization styles include:
       </td>
     </tr>
     <tr>
-      <td style="padding: 8px; border-bottom: 1px solid #ddd;">N or M (Avoid M)</td>
-      <td style="padding: 8px; border-bottom: 1px solid #ddd;">Rainfall / Matrix Rain</td>
-      <td style="padding: 8px; border-bottom: 1px solid #ddd;">
-        A falling-code visualizer, but music-reactive.<br>
-       <b>How it reacts to music:</b><br>
-        - Bass increases fall speed.<br>
-        - Treble increases character brightness.<br>
-        - Frequency buckets control column intensity.<br>
-        - Loud beats trigger green-white flashes.<br>
-        - Fits nicely with the existing retro/digital theme.<br>
-      </td>
-    </tr>
-    <tr>
       <td style="padding: 8px; border-bottom: 1px solid #ddd;">B or J</td>
       <td style="padding: 8px; border-bottom: 1px solid #ddd;">Vinyl Record / Turntable</td>
       <td style="padding: 8px; border-bottom: 1px solid #ddd;">
