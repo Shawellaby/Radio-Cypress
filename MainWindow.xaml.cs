@@ -73,6 +73,12 @@ public partial class MainWindow : Window
     private readonly object _fftLock = new();
     private readonly Complex[] _fftComplex = new Complex[FftSize];
 
+    private const int StereoScopeBufferSize = 2048;
+    private readonly float[] _leftScopeBuffer = new float[StereoScopeBufferSize];
+    private readonly float[] _rightScopeBuffer = new float[StereoScopeBufferSize];
+    private int _scopeBufferIndex;
+    private readonly object _scopeBufferLock = new();
+
     private VisualizationMode _visualizationMode = VisualizationMode.Equalizer;
     private SpectrumVisualizationContext _visualizationContext;
     private readonly Dictionary<VisualizationMode, IVisualizer> _visualizers = new();
@@ -85,10 +91,10 @@ public partial class MainWindow : Window
         LedMatrix,
         Ethereal,
         Starfield,
-        StarTrekComputer,
         Oscilloscope,
         VuMeter,
-        MatrixRain
+        MatrixRain,
+        LissajousScope
     }
 
     private static readonly double[] VisualizationBucketFrequencies =
@@ -134,7 +140,8 @@ public partial class MainWindow : Window
             () => _recordingSource?.WaveFormat?.SampleRate ?? 44100,
             () => _smoothedGain,
             VisualizationBucketFrequencies,
-            GetStereoVuLevels);
+            GetStereoVuLevels,
+            GetStereoScopeSamples);
 
         _visualizers[VisualizationMode.Equalizer] = new EqualizerSpectrumVisualizer();
         _visualizers[VisualizationMode.Psychedelic] = new PsychedelicSpectrumVisualizer();
@@ -145,13 +152,13 @@ public partial class MainWindow : Window
         _visualizers[VisualizationMode.Oscilloscope] = new OscilloscopeWaveformVisualizer();
         _visualizers[VisualizationMode.VuMeter] = new VuMeterVisualizer();
         _visualizers[VisualizationMode.MatrixRain] = new MatrixRainSpectrumVisualizer();
+        _visualizers[VisualizationMode.LissajousScope] = new LissajousScopeVisualizer();
 
         _visualizationTimer = new DispatcherTimer();
         _visualizationTimer.Interval = TimeSpan.FromMilliseconds(50);
         _visualizationTimer.Tick += UpdateVisualization;
         _visualizationTimer.Start();
     }
-
     /// <summary>
     /// Updates the audio spectrum visualization on the canvas by delegating to the currently active visualizer based on the selected visualization mode.
     /// Retrieves the appropriate visualizer from the dictionary and invokes its draw method with the current visualization context and FFT data.
@@ -296,6 +303,12 @@ public partial class MainWindow : Window
         if (e.Key == Key.N)
         {
             _visualizationMode = VisualizationMode.MatrixRain;
+            return;
+        }
+
+        if (e.Key == Key.X)
+        {
+            _visualizationMode = VisualizationMode.LissajousScope;
             return;
         }
 
@@ -461,6 +474,7 @@ public partial class MainWindow : Window
             }
 
             UpdateStereoVuLevels(a.Left, a.Right);
+            UpdateStereoScopeSamples(a.Left, a.Right);
         };
 
         var normalizedSampleSource = new NormalizedSampleSource(_notificationSource, this);
@@ -531,6 +545,44 @@ public partial class MainWindow : Window
                 Math.Clamp(Math.Sqrt(_leftVuLevel * gain), 0.0, 1.0),
                 Math.Clamp(Math.Sqrt(_rightVuLevel * gain), 0.0, 1.0));
         }
+    }
+
+    private void UpdateStereoScopeSamples(float left, float right)
+    {
+        lock (_scopeBufferLock)
+        {
+            _leftScopeBuffer[_scopeBufferIndex] = left;
+            _rightScopeBuffer[_scopeBufferIndex] = right;
+
+            _scopeBufferIndex++;
+
+            if (_scopeBufferIndex >= StereoScopeBufferSize)
+                _scopeBufferIndex = 0;
+        }
+    }
+
+    private (float[] Left, float[] Right) GetStereoScopeSamples()
+    {
+        float[] left = new float[StereoScopeBufferSize];
+        float[] right = new float[StereoScopeBufferSize];
+
+        lock (_scopeBufferLock)
+        {
+            int sourceIndex = _scopeBufferIndex;
+
+            for (int i = 0; i < StereoScopeBufferSize; i++)
+            {
+                left[i] = _leftScopeBuffer[sourceIndex];
+                right[i] = _rightScopeBuffer[sourceIndex];
+
+                sourceIndex++;
+
+                if (sourceIndex >= StereoScopeBufferSize)
+                    sourceIndex = 0;
+            }
+        }
+
+        return (left, right);
     }
 
 
