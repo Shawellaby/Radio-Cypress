@@ -55,6 +55,8 @@
                        Margin="0,0,0,4" />
             <TextBlock Text="W - Wave"
                        Margin="0,0,0,4" />
+            <TextBlock Text="N - Neon Rain"
+                       Margin="0,0,0,4" />
             <TextBlock Text="L - LED WOPR"
                        Margin="0,0,0,4" />
             <TextBlock Text="T - Ethereal"

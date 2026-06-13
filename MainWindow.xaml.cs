@@ -87,7 +87,8 @@ public partial class MainWindow : Window
         Starfield,
         StarTrekComputer,
         Oscilloscope,
-        VuMeter
+        VuMeter,
+        MatrixRain
     }
 
     private static readonly double[] VisualizationBucketFrequencies =
@@ -143,6 +144,7 @@ public partial class MainWindow : Window
         _visualizers[VisualizationMode.Starfield] = new StarfieldSpectrumVisualizer();
         _visualizers[VisualizationMode.Oscilloscope] = new OscilloscopeWaveformVisualizer();
         _visualizers[VisualizationMode.VuMeter] = new VuMeterVisualizer();
+        _visualizers[VisualizationMode.MatrixRain] = new MatrixRainSpectrumVisualizer();
 
         _visualizationTimer = new DispatcherTimer();
         _visualizationTimer.Interval = TimeSpan.FromMilliseconds(50);
@@ -288,6 +290,12 @@ public partial class MainWindow : Window
         if (e.Key == Key.V)
         {
             _visualizationMode = VisualizationMode.VuMeter;
+            return;
+        }
+
+        if (e.Key == Key.N)
+        {
+            _visualizationMode = VisualizationMode.MatrixRain;
             return;
         }
 
