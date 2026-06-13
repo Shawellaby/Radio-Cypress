@@ -383,7 +383,7 @@ This program is free software: you can redistribute it and/or modify it under th
 
 This program is distributed in the hope that it will be useful, but **without any warranty**, including the implied warranties of merchantability or fitness for a particular purpose.
 
-See: copying.txt
+See: LICENSE
 or visit: https://www.gnu.org/licenses/
 
 ---
