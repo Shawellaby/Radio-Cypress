@@ -501,7 +501,7 @@ Currently Included Visualizers:
   </tr>
   <tr>
     <td><img src="RepoAssets\RadioCypress_readmeimage_10.png" alt="Matrix Rain Spectrum" width="500"></td>
-    <td><img src="RepoAssets\RadioCypress_readmeimage_11.png" alt="LissajousS cope" width="500"></td>
+    <td><img src="RepoAssets\RadioCypress_readmeimage_11.png" alt="Lissajous Scope" width="500"></td>
 
   </tr>
 </table>
