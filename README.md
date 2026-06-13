@@ -484,24 +484,25 @@ Currently Included Visualizers:
 
 <table border=0>
   <tr>
-    <td><img src="RepoAssets\RadioCypress_readmeimage_08.png" alt="Radio Cypress screenshot" width="500"></td>
-    <td><img src="RepoAssets\RadioCypress_readmeimage_02.png" alt="Radio Cypress screenshot" width="500"></td>
+    <td><img src="RepoAssets\RadioCypress_readmeimage_08.png" alt="Equalizer Spectrum" width="500"></td>
+    <td><img src="RepoAssets\RadioCypress_readmeimage_02.png" alt="Ethereal Spectrum" width="500"></td>
   </tr>
   <tr>
-    <td><img src="RepoAssets\RadioCypress_readmeimage_03.png" alt="Radio Cypress screenshot" width="500"></td>
-    <td><img src="RepoAssets\RadioCypress_readmeimage_04.png" alt="Radio Cypress screenshot" width="500"></td>
+    <td><img src="RepoAssets\RadioCypress_readmeimage_03.png" alt="Psychedelic Spectrum" width="500"></td>
+    <td><img src="RepoAssets\RadioCypress_readmeimage_04.png" alt="Oscilloscope Waveform" width="500"></td>
   </tr>
   <tr>
-    <td><img src="RepoAssets\RadioCypress_readmeimage_05.png" alt="Radio Cypress screenshot" width="500"></td>
-    <td><img src="RepoAssets\RadioCypress_readmeimage_06.png" alt="Radio Cypress screenshot" width="500"></td>
+    <td><img src="RepoAssets\RadioCypress_readmeimage_05.png" alt="Led Matrix Spectrum" width="500"></td>
+    <td><img src="RepoAssets\RadioCypress_readmeimage_06.png" alt="Wave Spectrum" width="500"></td>
   </tr>
   <tr>
-    <td><img src="RepoAssets\RadioCypress_readmeimage_07.png" alt="Radio Cypress screenshot" width="500"></td>
-    <td><img src="RepoAssets\RadioCypress_readmeimage_09.png" alt="Radio Cypress screenshot" width="500"></td>
+    <td><img src="RepoAssets\RadioCypress_readmeimage_07.png" alt="Vu Meter" width="500"></td>
+    <td><img src="RepoAssets\RadioCypress_readmeimage_09.png" alt="Starfield Spectrum" width="500"></td>
   </tr>
   <tr>
-    <td><img src="RepoAssets\RadioCypress_readmeimage_10.png" alt="Radio Cypress screenshot" width="500"></td>
-    <td></td>
+    <td><img src="RepoAssets\RadioCypress_readmeimage_10.png" alt="Matrix Rain Spectrum" width="500"></td>
+    <td><img src="RepoAssets\RadioCypress_readmeimage_11.png" alt="LissajousS cope" width="500"></td>
+
   </tr>
 </table>
 
