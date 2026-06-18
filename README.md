@@ -7,8 +7,6 @@
 ![UI](https://img.shields.io/badge/UI-WPF-5C2D91)
 ![License](https://img.shields.io/badge/license-GPLv3-green)
 
----
-
 <p align="center">
   <img src="RepoAssets\RadioCypress_readmeimage_01.png" alt="Radio Cypress screenshot" width="650">
 </p>
