@@ -66,7 +66,7 @@ The file is created automatically on first run using the application’s default
 
 Example `stations.json`:
 ```json
-json [{"Number":1,"Name":"Cypress Radio","Url":"https://CypressRadio.org:8000/stream"},{"Number":2,"Name":"Big 80's","Url":"https://ssl.nexuscast.com:9044/;"}]
+[{"Number":1,"Name":"Cypress Radio","Url":"https://CypressRadio.org:8000/stream"},{"Number":2,"Name":"Big 80's","Url":"https://ssl.nexuscast.com:9044/;"}]
 ```
 
 ---
