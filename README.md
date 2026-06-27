@@ -4,6 +4,8 @@
 
 This branch moves Radio Cypress toward a more modular architecture. Core responsibilities such as playback, recording, audio analysis, visualization coordination, station storage, and window state are being separated into focused services, view models, and feature-specific project areas. The goal is to make the application easier to maintain, test, extend, and evolve without concentrating behavior in a small number of large UI classes.
 
+UNFORTUNATELY this refacoring is not yet complete and the result of it currently is a much laggy visualization experience.
+
 ![Platform](https://img.shields.io/badge/platform-Windows-blue)
 ![Framework](https://img.shields.io/badge/.NET-net10.0--windows-purple)
 ![UI](https://img.shields.io/badge/UI-WPF-5C2D91)
