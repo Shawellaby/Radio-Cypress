@@ -94,7 +94,9 @@ public partial class MainWindow : Window
         Oscilloscope,
         VuMeter,
         MatrixRain,
-        LissajousScope
+        LissajousScope,
+        AuroraBorealis,
+        FireFlameSpectrum
     }
 
     private static readonly double[] VisualizationBucketFrequencies =
@@ -309,6 +311,18 @@ public partial class MainWindow : Window
         if (e.Key == Key.X)
         {
             _visualizationMode = VisualizationMode.LissajousScope;
+            return;
+        }
+
+        if (e.Key == Key.A)
+        {
+            _visualizationMode = VisualizationMode.AuroraBorealis;
+            return;
+        }
+
+        if (e.Key == Key.F)
+        {
+            _visualizationMode = VisualizationMode.FireFlameSpectrum;
             return;
         }
 

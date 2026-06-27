@@ -10,7 +10,7 @@
         Background="Black"
         Foreground="White"
         Title="Help"
-        Height="730"
+        Height="770"
         Width="420"
         ShowInTaskbar="False"
         KeyDown="Window_KeyDown">
@@ -49,7 +49,11 @@
             <TextBlock Text="Visualizations" FontSize="14"
                        FontWeight="SemiBold"
                        Margin="0,0,0,4" />
+            <TextBlock Text="A - Aurora Borealis"
+                       Margin="0,0,0,4" />
             <TextBlock Text="E - Equalizer"
+                       Margin="0,0,0,4" />
+            <TextBlock Text="F - Fire / Flame Spectrum"
                        Margin="0,0,0,4" />
             <TextBlock Text="P - Psychedelic"
                        Margin="0,0,0,4" />
