@@ -1,5 +1,6 @@
 ﻿using System.IO;
 using System.Text.Json;
+using Shawellaby.RadioCypress.Models;
 
 namespace Shawellaby.RadioCypress;
 
@@ -24,15 +25,15 @@ public static class StationStore
     private static string StationsFilePath =>
         Path.Combine(StationsFolder, "stations.json");
 
-    public static Dictionary<int, MainWindow.Station> LoadOrCreateDefaultStations(
-        IReadOnlyDictionary<int, MainWindow.Station> defaultStations)
+    public static Dictionary<int, Station> LoadOrCreateDefaultStations(
+        IReadOnlyDictionary<int, Station> defaultStations)
     {
         Directory.CreateDirectory(StationsFolder);
 
         if (!File.Exists(StationsFilePath))
         {
             SaveStations(defaultStations);
-            return new Dictionary<int, MainWindow.Station>(defaultStations);
+            return new Dictionary<int, Station>(defaultStations);
         }
 
         try
@@ -45,7 +46,7 @@ public static class StationStore
             if (stationDefinitions is null || stationDefinitions.Count == 0)
             {
                 SaveStations(defaultStations);
-                return new Dictionary<int, MainWindow.Station>(defaultStations);
+                return new Dictionary<int, Station>(defaultStations);
             }
 
             Dictionary<int, MainWindow.Station> loadedStations = stationDefinitions
@@ -62,7 +63,7 @@ public static class StationStore
             if (loadedStations.Count == 0)
             {
                 SaveStations(defaultStations);
-                return new Dictionary<int, MainWindow.Station>(defaultStations);
+                return new Dictionary<int, Station>(defaultStations);
             }
 
             return loadedStations;
@@ -70,11 +71,11 @@ public static class StationStore
         catch
         {
             SaveStations(defaultStations);
-            return new Dictionary<int, MainWindow.Station>(defaultStations);
+            return new Dictionary<int, Station>(defaultStations);
         }
     }
 
-    public static void SaveStations(IReadOnlyDictionary<int, MainWindow.Station> stations)
+    public static void SaveStations(IReadOnlyDictionary<int, Station> stations)
     {
         Directory.CreateDirectory(StationsFolder);
 

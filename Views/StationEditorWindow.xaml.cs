@@ -4,6 +4,7 @@ using System.Runtime.CompilerServices;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
+using Shawellaby.RadioCypress.Models;
 
 namespace Shawellaby.RadioCypress;
 
@@ -26,9 +27,9 @@ public partial class StationEditorWindow : Window, INotifyPropertyChanged
         }
     }
 
-    public Dictionary<int, MainWindow.Station> EditedStations { get; private set; } = new();
+    public Dictionary<int, Station> EditedStations { get; private set; } = new();
 
-    public StationEditorWindow(Dictionary<int, MainWindow.Station> stations)
+    public StationEditorWindow(Dictionary<int, Station> stations)
     {
         InitializeComponent();
 
@@ -122,7 +123,8 @@ public partial class StationEditorWindow : Window, INotifyPropertyChanged
             .OrderBy(station => station.Number)
             .ToDictionary(
                 station => station.Number,
-                station => new MainWindow.Station(
+                station => new Station(
+                    station.Number,
                     station.Name.Trim(),
                     station.Url.Trim()));
 

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows;
 using System.Windows.Input;
+using Shawellaby.RadioCypress.Models;
 
 namespace Shawellaby.RadioCypress;
 
@@ -15,7 +16,7 @@ public partial class HelpWindow : Window
     public string CopyrightYear => "2019 - " + DateTime.Now.Year.ToString();
 
 
-    public HelpWindow(Dictionary<int, MainWindow.Station> stations)
+    public HelpWindow(Dictionary<int, Station> stations)
     {
         InitializeComponent();
 

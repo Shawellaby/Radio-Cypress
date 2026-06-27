@@ -3,6 +3,7 @@ using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
+using Shawellaby.RadioCypress.Models;
 
 namespace Shawellaby.RadioCypress;
 
@@ -14,7 +15,7 @@ public partial class StationSelectionWindow : Window
 
     public int? SelectedStationNumber { get; private set; }
 
-    public StationSelectionWindow(Dictionary<int, MainWindow.Station> stations)
+    public StationSelectionWindow(Dictionary<int, Station> stations)
     {
         InitializeComponent();
 
