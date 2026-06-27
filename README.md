@@ -2,6 +2,8 @@
 
 **Radio Cypress** is a Windows desktop internet radio player built with **WPF** and **C#**. It provides a compact keyboard-driven radio interface with editable station presets, audio recording, mute control, and real-time audio visualizations.
 
+This branch moves Radio Cypress toward a more modular architecture. Core responsibilities such as playback, recording, audio analysis, visualization coordination, station storage, and window state are being separated into focused services, view models, and feature-specific project areas. The goal is to make the application easier to maintain, test, extend, and evolve without concentrating behavior in a small number of large UI classes.
+
 ![Platform](https://img.shields.io/badge/platform-Windows-blue)
 ![Framework](https://img.shields.io/badge/.NET-net10.0--windows-purple)
 ![UI](https://img.shields.io/badge/UI-WPF-5C2D91)
@@ -150,6 +152,36 @@ Primary audio-related responsibilities include:
 - Audio sample processing.
 - FFT-based visualization.
 - MP3 recording.
+
+---
+
+## Architecture
+
+Radio Cypress is being organized around a more modular WPF application structure. Instead of placing most application behavior directly in windows, responsibilities are split into smaller feature-oriented components.
+
+Current architectural direction:
+
+- **Views** contain WPF windows and visual UI definitions.
+- **ViewModels** manage screen state, commands, and presentation logic.
+- **Services** encapsulate application capabilities such as audio playback, recording, station persistence, audio analysis, and visualization coordination.
+- **Models** represent data used by the app, such as station presets.
+- **Visualizations** contain reusable drawing components for audio-reactive visual effects.
+- **Infrastructure** contains shared application plumbing and cross-cutting helpers.
+
+This separation is intended to make future work easier, including alternate station storage backends, additional visualization modes, cleaner audio pipeline changes, and more focused testing.
+
+### Modular Service Areas
+
+The service layer is divided into focused areas:
+
+| Area | Responsibility |
+|---|---|
+| Audio services | Playback, recording, sample handling, and audio analysis |
+| Station services | Default stations and station persistence |
+| Visualization services | Visualizer registration and active visualization coordination |
+| Dialog/UI coordination | User-facing workflow boundaries where appropriate |
+
+The project may continue to evolve toward clearer interfaces and interchangeable implementations as new features are added.
 
 ---
 
@@ -497,25 +529,31 @@ Currently Included Visualizers:
 
 ## Project Structure
 
-Typical source areas include: 
+Typical source areas include:
 
 ```text
 RadioCypress/
-├── MainWindow.xaml
-├── MainWindow.xaml.cs
-├── HelpWindow.xaml
-├── HelpWindow.xaml.cs
-├── StationSelectionWindow.xaml
-├── StationSelectionWindow.xaml.cs
-├── StationEditorWindow.xaml
-├── StationEditorWindow.xaml.cs
-├── StationStore.cs
+ ├── App.xaml
+ ├── App.xaml.cs
+ ├── Commands/
+ ├── Content/
+ ├── Infrastructure/
+ ├── Models/
+ ├── Services/
+       │
+       ├── Audio/
+       │
+       ├── Dialogs/
+       │
+       ├── Stations/
+       │
+       └── Visualization/
+├── ViewModels/
+├── Views/
 └── Visualizations/
-    ├── IVisualizer.cs
-    ├── SpectrumVisualizationContext.cs
-    └── ...
 ```
 
+The source tree is intentionally grouped by responsibility so playback, station management, visualization, and presentation logic can evolve independently.
 
 ---
 
