@@ -30,7 +30,9 @@
     <configurations />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a0679144-7eee-4c7a-bb85-727d305ec4fa" name="Changes" comment="" />
+    <list default="true" id="a0679144-7eee-4c7a-bb85-727d305ec4fa" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/MainWindow.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MainWindow.xaml.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -78,61 +80,61 @@
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0007506641635504" />
-      <entry key="MS500" value="1.321083162938005" />
-      <entry key="S2" value="5.0110510276750775" />
-      <entry key="S5" value="15.380096437643346" />
-      <entry key="S10" value="29.816765866777608" />
-      <entry key="S30" value="63.69000427453266" />
-      <entry key="S60" value="93.12018373098891" />
-      <entry key="M2" value="123.74302368798804" />
-      <entry key="M5" value="154.6832483895915" />
-      <entry key="M10" value="168.58777864456434" />
-      <entry key="M15" value="173.75291723867912" />
-      <entry key="M30" value="179.21620292041888" />
-      <entry key="H1" value="182.06656623600023" />
-      <entry key="H2" value="183.52319815869612" />
-      <entry key="H4" value="184.98220384305444" />
-      <entry key="D1" value="596.61467637349" />
-      <entry key="W1" value="1864.2350235836534" />
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="1.5433095293897708E-107" />
+      <entry key="S2" value="9.264234621647546E-27" />
+      <entry key="S5" value="3.1168173063095875E-10" />
+      <entry key="S10" value="1.3422600954968842E-4" />
+      <entry key="S30" value="1.0516308699011006" />
+      <entry key="S60" value="11.965747886561994" />
+      <entry key="M2" value="44.35767104663632" />
+      <entry key="M5" value="102.61775012479403" />
+      <entry key="M10" value="137.31427578772738" />
+      <entry key="M15" value="151.53926385596745" />
+      <entry key="M30" value="167.36853155157405" />
+      <entry key="H1" value="175.9456234972881" />
+      <entry key="H2" value="180.41186763098227" />
+      <entry key="H4" value="183.407468286546" />
+      <entry key="D1" value="595.7651709884268" />
+      <entry key="W1" value="1863.8555863022232" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="0.0" />
-      <entry key="S2" value="0.0" />
-      <entry key="S5" value="0.0" />
-      <entry key="S10" value="0.0" />
-      <entry key="S30" value="0.0" />
-      <entry key="S60" value="0.0" />
-      <entry key="M2" value="0.0" />
-      <entry key="M5" value="9.932078493098959E-151" />
-      <entry key="M10" value="1.4092341139323696E-75" />
-      <entry key="M15" value="1.583630618717848E-50" />
-      <entry key="M30" value="1.7796564475644985E-25" />
-      <entry key="H1" value="5.965977915020504E-13" />
-      <entry key="H2" value="1.0923340153955158E-6" />
-      <entry key="H4" value="0.0014780619485137102" />
-      <entry key="D1" value="0.6013681503747947" />
-      <entry key="W1" value="1.68451290389642" />
+      <entry key="MS100" value="1.0000000427351965" />
+      <entry key="MS500" value="1.0336465896860323" />
+      <entry key="S2" value="1.556402043101539" />
+      <entry key="S5" value="2.368082013542103" />
+      <entry key="S10" value="2.986022597470147" />
+      <entry key="S30" value="3.6032495394071513" />
+      <entry key="S60" value="3.7930935359858102" />
+      <entry key="M2" value="3.8943126610135095" />
+      <entry key="M5" value="3.957175335549675" />
+      <entry key="M10" value="3.9784948927402093" />
+      <entry key="M15" value="3.9856425587967896" />
+      <entry key="M30" value="3.992810906206461" />
+      <entry key="H1" value="3.9964028557331184" />
+      <entry key="H2" value="3.9982018518290947" />
+      <entry key="H4" value="4.000565705830529" />
+      <entry key="D1" value="4.60036189179973" />
+      <entry key="W1" value="5.6841486194188935" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.013593700282294145" />
-      <entry key="MS500" value="0.737303350364189" />
-      <entry key="S2" value="4.806195820596494" />
-      <entry key="S5" value="15.284038144907557" />
-      <entry key="S10" value="29.761476709587875" />
-      <entry key="S30" value="63.666524888438445" />
-      <entry key="S60" value="93.10578462012174" />
-      <entry key="M2" value="123.73331149068768" />
-      <entry key="M5" value="154.67774604702913" />
-      <entry key="M10" value="168.58456893052735" />
-      <entry key="M15" value="173.75065453586006" />
-      <entry key="M30" value="179.21500393390153" />
-      <entry key="H1" value="182.06594857257" />
-      <entry key="H2" value="183.52288570912702" />
-      <entry key="H4" value="184.98352358969436" />
-      <entry key="D1" value="597.215983731988" />
-      <entry key="W1" value="1865.9195110002474" />
+      <entry key="MS100" value="2.988956279253061E-5" />
+      <entry key="MS500" value="0.13220640714525975" />
+      <entry key="S2" value="0.9694618750581064" />
+      <entry key="S5" value="1.9653137569230754" />
+      <entry key="S10" value="2.719613512106942" />
+      <entry key="S30" value="4.543363334901464" />
+      <entry key="S60" value="15.697944795613456" />
+      <entry key="M2" value="48.218045898076184" />
+      <entry key="M5" value="106.55886015937888" />
+      <entry key="M10" value="141.2839093876374" />
+      <entry key="M15" value="155.51875950120763" />
+      <entry key="M30" value="171.35813156146446" />
+      <entry key="H1" value="179.94038275892595" />
+      <entry key="H2" value="184.40923763071413" />
+      <entry key="H4" value="187.4076151424246" />
+      <entry key="D1" value="600.3654285181954" />
+      <entry key="W1" value="1869.5397032026171" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -145,33 +147,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;.NET Project.Debug.executor&quot;: &quot;Debug&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Publish to IIS.RadioCypress: FolderProfile.executor&quot;: &quot;Run&quot;,
-    &quot;Publish to folder.x64 Single File Release.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    ".NET Project.Debug.executor": "Debug",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Publish to IIS.RadioCypress: FolderProfile.executor": "Run",
+    "Publish to folder.x64 Single File Release.executor": "Run",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "cidr.known.project.marker": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "main",
+    "junie.onboarding.icon.badge.shown": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected=".NET Project.Debug">
     <configuration name="x64 Single File Release" type="DotNetFolderPublish" factoryName="Publish to folder">
       <riderPublish configuration="Release" platform="Any CPU" produce_single_file="true" self_contained="true" target_folder="$PROJECT_DIR$/bin/Release/net10.0-windows/win-x64/publish" target_framework="net10.0-windows" uuid_high="1284605808689367686" uuid_low="-8106699012602930582">

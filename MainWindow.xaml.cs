@@ -155,6 +155,8 @@ public partial class MainWindow : Window
         _visualizers[VisualizationMode.VuMeter] = new VuMeterVisualizer();
         _visualizers[VisualizationMode.MatrixRain] = new MatrixRainSpectrumVisualizer();
         _visualizers[VisualizationMode.LissajousScope] = new LissajousScopeVisualizer();
+        _visualizers[VisualizationMode.AuroraBorealis] = new AuroraBorealisVisualizer();
+        _visualizers[VisualizationMode.FireFlameSpectrum] = new FireFlameSpectrumVisualizer();
 
         _visualizationTimer = new DispatcherTimer();
         _visualizationTimer.Interval = TimeSpan.FromMilliseconds(50);
